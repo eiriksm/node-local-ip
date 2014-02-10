@@ -9,7 +9,7 @@ ip address is so you can broadcast it to different services.
 
 # Example
 ```js
-var localip = require('localip');
+var localip = require('local-ip');
 var interface = 'wlan0';
 
 localip(interface, function(err, res) {
@@ -27,3 +27,6 @@ Pretty self-explanatory. It is basically just a wrapper around
 ## localip(interface, callback)
 Gets local ip and invokes callback with `(err, res)` as you might be used to
 in other modules in node.
+
+# License
+MIT
