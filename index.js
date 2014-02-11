@@ -6,12 +6,10 @@
 
   var getLocalIp = function(iface, callback) {
     var returnVal;
-    if (!iface) {
-      iface = 'wlan0';
-    }
     for (var dev in ifaces) {
       if (ifaces.hasOwnProperty(dev)) {
-        if (dev !== iface) {
+        // If the user does not specify anything, last value will be returned.
+        if (iface && dev !== iface) {
           continue;
         }
         for (var i = 0, len = ifaces[dev].length; i < len; i++) {
