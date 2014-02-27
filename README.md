@@ -4,6 +4,9 @@ node-local-ip
 Get local ip address in node.
 [![Build Status](https://secure.travis-ci.org/eiriksm/node-local-ip.png)](http://travis-ci.org/eiriksm/node-local-ip)
 
+# Installation
+` npm install local-ip`
+
 # Why?
 Well, for different kinds of reasons you might want to know what your local
 ip address is so you can broadcast it to different services.
