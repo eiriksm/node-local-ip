@@ -1,8 +1,10 @@
 node-local-ip
 =============
+[![Build Status](https://travis-ci.org/eiriksm/node-local-ip.svg)](https://travis-ci.org/eiriksm/node-local-ip)
+[![Code Climate](http://img.shields.io/codeclimate/github/eiriksm/node-local-ip.svg)](https://codeclimate.com/github/eiriksm/node-local-ip)
+[![Dependency Status](https://david-dm.org/eiriksm/node-local-ip.svg?theme=shields.io)](https://david-dm.org/eiriksm/node-local-ip)
 
 Get local ip address in node.
-[![Build Status](https://secure.travis-ci.org/eiriksm/node-local-ip.png)](http://travis-ci.org/eiriksm/node-local-ip)
 
 # Installation
 ` npm install local-ip`
