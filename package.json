@@ -1,6 +1,6 @@
 {
   "name": "local-ip",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Get local ip address in node.",
   "main": "index.js",
   "scripts": {
