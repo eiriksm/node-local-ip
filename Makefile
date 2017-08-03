@@ -1,4 +1,4 @@
 test:
-	node test/test.js
+	npm test
 
 .PHONY: test
