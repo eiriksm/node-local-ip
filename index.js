@@ -20,7 +20,7 @@ var getLocalIp = function(iface, callback) {
   var error = util.format('No address found on %s', iface);
   if (!callback) {
     if (!returnVal) {
-      throw new Error(error)
+      throw new Error(error);
     }
     return returnVal;
   }
