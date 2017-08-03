@@ -23,6 +23,6 @@
   "homepage": "https://github.com/eiriksm/node-local-ip",
   "devDependencies": {
     "coveralls": "^2.13.1",
-    "tape": "~2.14.0"
+    "tap": "^10.7.1"
   }
 }
