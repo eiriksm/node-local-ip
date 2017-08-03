@@ -12,26 +12,33 @@ Get local ip address in node.
 Well, for different kinds of reasons you might want to know what your local
 ip address is so you can broadcast it to different services.
 
+# API
+
+## localip(interface, [callback])
+
+__interface__ should be a network interface, such as wlan0.
+__callback__ is optional, and will be invoked with the signature `callback(err, res)` if specified. If no callback is specified, the value will be returned directly, or an Error will be thrown in case of an error.
+
 # Example
 ```js
 var localip = require('local-ip');
-var interface = 'wlan0';
+var iface = 'wlan0';
 
-localip(interface, function(err, res) {
+localip(iface, function(err, res) {
   if (err) {
     throw new Error('I have no idea what my local ip is.');
   }
-  console.log('My local ip address on ' + interface + ' is ' + res);
+  console.log('My local ip address on ' + iface + ' is ' + res);
 });
 ```
 
-# "Docs"
-Pretty self-explanatory. It is basically just a wrapper around
-`require('os').networkInterfaces`
+You can also use it in sync mode:
 
-## localip(interface, callback)
-Gets local ip and invokes callback with `(err, res)` as you might be used to
-in other modules in node.
+```
+var iface = 'wlan0';
+var localip = require('local-ip')(interface);
+console.log('My local ip address on ' + iface + ' is ' + localip);
+```
 
 # License
 MIT

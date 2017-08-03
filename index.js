@@ -17,10 +17,16 @@ var getLocalIp = function(iface, callback) {
       }
     }
   });
-  if (!returnVal) {
-    callback(new Error(util.format('No address found on %s', iface)));
-    return;
+  var error = util.format('No address found on %s', iface);
+  if (!callback) {
+    if (!returnVal) {
+      throw new Error(error)
+    }
+    return returnVal;
   }
-  callback(null, returnVal);
+  if (!returnVal) {
+    return callback(new Error(error));
+  }
+  return callback(null, returnVal);
 };
 module.exports = getLocalIp;
