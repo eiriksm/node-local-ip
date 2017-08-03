@@ -34,7 +34,7 @@ localip(iface, function(err, res) {
 
 You can also use it in sync mode:
 
-```
+```js
 var iface = 'wlan0';
 var localip = require('local-ip')(interface);
 console.log('My local ip address on ' + iface + ' is ' + localip);
