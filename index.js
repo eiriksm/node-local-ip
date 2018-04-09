@@ -1,9 +1,9 @@
 'use strict';
 var os = require('os');
 var util = require('util');
-var ifaces = os.networkInterfaces();
 
 var getLocalIp = function(iface, callback) {
+  var ifaces = os.networkInterfaces();
   var returnVal;
   Object.keys(ifaces).forEach(function(dev) {
     // If the user does not specify anything, last value will be returned.
